@@ -42,3 +42,10 @@ function checkAvailability(schedule, currentTime) {
 }
 
 // or
+
+function checkAvailability(schedule, currentTime) {
+  schedule = schedule.filter(function(limits){
+      return ((currentTime >= limits[0]) && (currentTime < limits[1]));
+  });
+  return schedule.length ? schedule[0][1] : true;
+}
