@@ -40,3 +40,5 @@ function checkAvailability(schedule, currentTime) {
   }
   return true;
 }
+
+// or
