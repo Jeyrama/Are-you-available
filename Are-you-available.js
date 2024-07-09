@@ -31,3 +31,12 @@ Note: You can expect only valid input.
 
 
 // Solution
+
+function checkAvailability(schedule, currentTime) {
+  for (let [start, end] of schedule) {
+    if (start <= currentTime && currentTime < end) {
+      return end;
+    }
+  }
+  return true;
+}
